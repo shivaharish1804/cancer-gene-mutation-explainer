@@ -283,11 +283,18 @@ if predict_btn:
         explainer   = shap.TreeExplainer(clf)
         shap_values = explainer.shap_values(input_row)
 
-        # shap_values is list [benign_shap, pathogenic_shap]
-        sv = shap_values[1][0] if isinstance(shap_values, list) else shap_values[0]
+        # Handle all SHAP output formats across versions
+        if isinstance(shap_values, list):
+            sv = np.array(shap_values[1][0]).flatten()
+        elif hasattr(shap_values, 'ndim') and shap_values.ndim == 3:
+            sv = np.array(shap_values[0, :, 1]).flatten()
+        elif hasattr(shap_values, 'ndim') and shap_values.ndim == 2:
+            sv = np.array(shap_values[0]).flatten()
+        else:
+            sv = np.array(shap_values).flatten()
 
         fig, ax = plt.subplots(figsize=(8, 4))
-        colors = ["#E24B4A" if v > 0 else "#378ADD" for v in sv]
+        colors = ["#E24B4A" if float(v) > 0 else "#378ADD" for v in sv]
         y_pos  = range(len(feature_cols))
 
         ax.barh(y_pos, sv, color=colors, edgecolor="none", height=0.6)
