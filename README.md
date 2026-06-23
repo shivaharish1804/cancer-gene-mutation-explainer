@@ -2,9 +2,9 @@
 
 An AI-powered web application that predicts whether a gene mutation is **harmful (pathogenic)** or **harmless (benign)** — and explains the reasoning in plain English using SHAP (Explainable AI).
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.35-red)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange)
+![Python](https://img.shields.io/badge/Python-3.14.6-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.58-red)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-orange)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainability-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
