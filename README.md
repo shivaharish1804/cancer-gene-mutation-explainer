@@ -21,7 +21,7 @@ Genetic mutations can either cause cancer or be completely harmless. Biologists 
 
 ## 🚀 Live Demo
 
-▶️ **[Try it on Streamlit Cloud →](https://share.streamlit.io)** *(deploy following the steps below)*
+▶️ Try it on Streamlit Cloud → https://cancer-gene-mutation-explainer-7kveaj7kh7zcr45kq3oh9t.streamlit.app
 
 ---
 
@@ -149,7 +149,7 @@ MIT License — free to use, modify, and share.
 
 ## 🙋 Author
 
-**[Your Name]**  
+**Shivaharish S**  
 [LinkedIn](https://linkedin.com) | [GitHub](https://github.com)
 
 *Built as part of a portfolio in AI/ML applied to Biotechnology.*
